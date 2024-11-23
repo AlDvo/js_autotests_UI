@@ -1,5 +1,5 @@
 # Название
-name: pw academy_bug
+name: pw
 on: # Когда запускаем тесты
   workflow_dispatch: # Ручной запуск автотестов
 jobs:
