@@ -7,10 +7,7 @@
 - <a href="#allureReport"> Пример Allure-отчета</a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота</a>
 
-Тесты написаны на языке <code>Java</code> с использованием фреймворка для автоматизации тестирования <code>[Rest Assured](https://rest-assured.io/)</code>, сборщик - <code>Gradle</code>.
-
-<code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования.
-
+Тесты написаны на языке <code>JavaScript</code> с использованием фреймворка для автоматизации тестирования <code>[Playwright](https://playwright.dev)</code>.
 
 Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 
