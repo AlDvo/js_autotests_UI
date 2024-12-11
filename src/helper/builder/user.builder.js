@@ -19,24 +19,18 @@ export class UserBuilder {
         return this;
     }
 
-    addPassword() {
-        this.userPassword = faker.internet.password();
-        return this;
-    }
-
-    addNotValidPassword() {
-        this.userNotValidPassword = faker.internet.password(3);
+    addPassword(number = 10) {
+        this.userPassword = faker.internet.password(number);
         return this;
     }
 
     generate() {
         const copied = structuredClone(
             {
-                userFirstName: this.userFirstName,
-                userLastName: this.userLastName,
-                userEmail: this.userEmail,
-                userPassword: this.userPassword,
-                userNotValidPassword: this.userNotValidPassword,
+                firstName: this.userFirstName,
+                lastName: this.userLastName,
+                email: this.userEmail,
+                password: this.userPassword
             }
 
         );

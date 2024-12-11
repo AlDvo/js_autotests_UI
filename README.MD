@@ -33,7 +33,7 @@ npm test
 
 ---
 <a id="jenkins"></a>
-## <img width="20" style="vertical-align:middle" title="Jenkins" src="media/logo/jenkins.svg"> </a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/chitai-gorod-tests/"> Jenkins </a>
+## <img width="20" style="vertical-align:middle" title="Jenkins" src="media/logo/jenkins.svg"> </a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/001-aldvo-JsPlaywrightFinalWork/"> Jenkins </a>
 Для доступа в Jenkins необходима регистрация на ресурсе [Jenkins](https://jenkins.autotests.cloud/) Для запуска сборки необходимо перейти в раздел <code>Build with parameters</code>, выбрать необходимые параметры и нажать кнопку <code>Build</code>.
 <p align="center">
 <img title="jenkins" src="media/screenshots/jenkins.png ">
@@ -42,9 +42,16 @@ npm test
 
 ____
 <a id="allureReport"></a>
-## <img width="30" style="vertical-align:middle" title="Allure Report" src="media/logo/allure.svg"> </a> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/chitai-gorod-tests/8/allure/"> Allure-отчета </a>
+## <img width="30" style="vertical-align:middle" title="Allure Report" src="media/logo/allure.svg"> </a> Пример <a target="_blank" href="https://jenkins.autotests.cloud/job/001-aldvo-JsPlaywrightFinalWork/22/allure/"> Allure-отчета </a>
 <p align="center">
 <img title="Allure Report" src="media/screenshots/allure.png">
+</p>
+
+____
+<a id="allureTestOpsReport"></a>
+## <img width="30" style="vertical-align:middle" title="Allure Report" src="media/logo/testops-logo.png"> </a> Пример <a target="_blank" href="https://allure.autotests.cloud/launch/43065/tree/677705?treeId=0"> Allure-отчета </a>
+<p align="center">
+<img title="Allure TestOps Report" src="media/screenshots/allure-testops.png">
 </p>
 
 ____

@@ -1,6 +1,7 @@
 import { AddContactApi, AddUserApi, DeleteContact, DeleteUser, GetContact, GetContactList, GetUser, LogInUser, LogOutUser, UpdateContact } from "./index";
 
 export class AppClient {
+
     constructor() {
         this.addContact = new AddContactApi();
         this.addUser = new AddUserApi();

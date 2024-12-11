@@ -15,7 +15,7 @@ export class ContactBuilder {
     }
 
     addBirthDate() {
-        this.userBirthDate = faker.date.birthdate();
+        this.userBirthDate = faker.date.birthdate().toISOString().substring(0, 10);
         return this;
     }
 
@@ -25,7 +25,7 @@ export class ContactBuilder {
     }
 
     addPhone() {
-        this.userPhone = faker.phone.number();
+        this.userPhone = faker.phone.number({ style: 'national' });
         return this;
     }
 
@@ -50,7 +50,7 @@ export class ContactBuilder {
     }
 
     addPostalCode() {
-        this.userPostalCode = faker.location.countryCode();
+        this.userPostalCode = faker.location.countryCode('numeric');
         return this;
     }
 
@@ -62,17 +62,17 @@ export class ContactBuilder {
     generate() {
         const copied = structuredClone(
             {
-                userFirstName: this.userFirstName,
-                userLastName: this.userLastName,
-                userBirthDate: this.userBirthDate,
-                userEmail: this.userEmail,
-                userPhone: this.userPhone,
-                userStreetOne: this.userStreetOne,
-                userStreetTwo: this.userStreetTwo,
-                userCity: this.userCity,
-                userState: this.userState,
-                userPostalCode: this.userPostalCode,
-                userCountry: this.userCountry,
+                firstName: this.userFirstName,
+                lastName: this.userLastName,
+                birthdate: this.userBirthDate,
+                email: this.userEmail,
+                phone: this.userPhone,
+                street1: this.userStreetOne,
+                street2: this.userStreetTwo,
+                city: this.userCity,
+                stateProvince: this.userState,
+                postalCode: this.userPostalCode,
+                country: this.userCountry,
             }
 
         );

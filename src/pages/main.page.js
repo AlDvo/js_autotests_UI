@@ -15,13 +15,13 @@ export class MainPage extends BasePage {
     }
 
     async clickSubmit() {
-        await allure.step(`Перейти на сраницу продления лицензии`, async ({ page }) => {
+        await allure.step(`Авторизоваться в системе`, async ({ page }) => {
             await this.submit.click();
         });
     }
 
     async clickSignUp() {
-        await allure.step(`Перейти на сраницу продления лицензии`, async ({ page }) => {
+        await allure.step(`Перейти на сраницу создания учетной записи`, async ({ page }) => {
             await this.signUp.click();
         });
     }

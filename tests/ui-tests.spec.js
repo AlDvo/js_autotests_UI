@@ -39,13 +39,12 @@ test.describe('Test with login user', () => {
             .addEmail()
             .addLastName()
             .addPassword()
-            .addNotValidPassword()
             .generate();
 
         app = new App(page);
         await app.mainPage.open(URL);
         await app.mainPage.clickSignUp();
-        await app.addUser.fillField(user.userFirstName, user.userLastName, user.userEmail, user.userPassword);
+        await app.addUser.fillField(user.firstName, user.lastName, user.email, user.password);
         await app.addUser.clickSubmit();
 
         await expect(await app.contactList.contacts).toBeVisible();
@@ -70,20 +69,11 @@ test.describe('Test with login user', () => {
             .generate();
 
         await app.contactList.clickAddNewContact();
-        await app.addContact.fillField(contact.userFirstName, contact.userLastName);
+        await app.addContact.fillField(contact.firstName, contact.lastName);
         await app.addContact.clickSubmitButton();
 
-        await expect(await app.contactList.contactsTable).toContainText(contact.userFirstName);
-        await expect(await app.contactList.contactsTable).toContainText(contact.userLastName);
-    });
-
-    test("Check correct login", async ({ page }) => {
-        await app.contactList.clickLogout();
-
-        await app.mainPage.fillField(user.userEmail, user.userPassword);
-        await app.mainPage.clickSubmit();
-
-        await expect(await app.contactList.contacts).toBeVisible();
+        await expect(await app.contactList.contactsTable).toContainText(contact.firstName);
+        await expect(await app.contactList.contactsTable).toContainText(contact.lastName);
     });
 
     test("Check contact list, after not add contact", async ({ page }) => {
@@ -92,15 +82,42 @@ test.describe('Test with login user', () => {
 
         await expect(await app.contactList.contactsTable).toBeDefined();
     });
+});
+
+test.describe('Test with registered user account', () => {
+    test.beforeEach(async ({ page }) => {
+
+        user = new UserBuilder()
+            .addFirstName()
+            .addEmail()
+            .addLastName()
+            .addPassword()
+            .generate();
+
+        app = new App(page);
+        await app.mainPage.open(URL);
+        await app.mainPage.clickSignUp();
+        await app.addUser.fillField(user.firstName, user.lastName, user.email, user.password);
+        await app.addUser.clickSubmit();
+
+        await expect(await app.contactList.contacts).toBeVisible();
+
+        await app.contactList.clickLogout();
+    });
 
     test("Make new user with used email", async ({ page }) => {
-        await app.contactList.clickLogout();
-
         await app.mainPage.clickSignUp();
-        await app.addUser.fillField(user.userFirstName, user.userLastName, user.userEmail, user.userPassword);
+        await app.addUser.fillField(user.firstName, user.lastName, user.email, user.password);
         await app.addUser.clickSubmit();
 
         await expect(await app.addUser.errorValidation).toContainText(emailBusy);
+    });
+
+    test("Check correct login", async ({ page }) => {
+        await app.mainPage.fillField(user.email, user.password);
+        await app.mainPage.clickSubmit();
+
+        await expect(await app.contactList.contacts).toBeVisible();
     });
 });
 
