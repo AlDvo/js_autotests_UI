@@ -78,6 +78,7 @@ test.describe('Test with login user', () => {
 
     test("Check contact list, after not add contact", async ({ page }) => {
         await app.contactList.clickAddNewContact();
+        await app.addContact.fillField();
         await app.addContact.clickCancelButton();
 
         await expect(await app.contactList.contactsTable).toBeDefined();
