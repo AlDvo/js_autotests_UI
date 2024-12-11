@@ -5,7 +5,7 @@
 - <a href="#autotests"> Запуск автотестов</a>
 - <a href="#jenkins"> Сборка в Jenkins</a>
 - <a href="#allureReport"> Пример Allure-отчета</a>
-- <a href="#allureTestOpsReport"> Пример AllureTestOps-отчета</a>
+- <a href="#allureTestOpsReport"> Пример Allure TestOps-отчета</a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота</a>
 
 Тесты написаны на языке <code>JavaScript</code> с использованием фреймворка для автоматизации тестирования <code>[Playwright](https://playwright.dev)</code>.
@@ -50,7 +50,7 @@ ____
 
 ____
 <a id="allureTestOpsReport"></a>
-## <img width="30" style="vertical-align:middle" title="Allure Report" src="media/logo/testops-logo.png"> </a> Пример <a target="_blank" href="https://allure.autotests.cloud/launch/43065/tree/677705?treeId=0"> Allure-отчета </a>
+## <img width="30" style="vertical-align:middle" title="Allure TestOps Report" src="media/logo/testops-logo.png"> </a> Пример <a target="_blank" href="https://allure.autotests.cloud/launch/43065/tree/677705?treeId=0"> Allure-отчета </a>
 <p align="center">
 <img title="Allure TestOps Report" src="media/screenshots/allure-testops.png">
 </p>
