@@ -3,7 +3,6 @@ import { App } from "../src/pages/index.js";
 import { ContactBuilder, UserBuilder } from '../src/helper/index.js';
 
 
-const URL = "https://thinking-tester-contact-list.herokuapp.com";
 const docURL = "https://documenter.getpostman.com/view/4012288/TzK2bEa8";
 const validationFailed = 'Contact validation failed';
 const emailBusy = 'Email address is already in use';
@@ -16,7 +15,7 @@ test.describe('Test without login user', () => {
 
     test.beforeEach(async ({ page }) => {
         app = new App(page);
-        await app.mainPage.open(URL);
+        await app.mainPage.open('/');
     });
 
     test("Check incorrect log in", async ({ page }) => {
@@ -42,7 +41,7 @@ test.describe('Test with login user', () => {
             .generate();
 
         app = new App(page);
-        await app.mainPage.open(URL);
+        await app.mainPage.open('/');
         await app.mainPage.clickSignUp();
         await app.addUser.fillField(user.firstName, user.lastName, user.email, user.password);
         await app.addUser.clickSubmit();
@@ -96,7 +95,7 @@ test.describe('Test with registered user account', () => {
             .generate();
 
         app = new App(page);
-        await app.mainPage.open(URL);
+        await app.mainPage.open('/');
         await app.mainPage.clickSignUp();
         await app.addUser.fillField(user.firstName, user.lastName, user.email, user.password);
         await app.addUser.clickSubmit();
