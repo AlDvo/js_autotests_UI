@@ -5,6 +5,7 @@
 - <a href="#autotests"> Запуск автотестов</a>
 - <a href="#jenkins"> Сборка в Jenkins</a>
 - <a href="#allureReport"> Пример Allure-отчета</a>
+- <a href="#allureTestOpsReport"> Пример AllureTestOps-отчета</a>
 - <a href="#tg"> Уведомления в Telegram с использованием бота</a>
 
 Тесты написаны на языке <code>JavaScript</code> с использованием фреймворка для автоматизации тестирования <code>[Playwright](https://playwright.dev)</code>.
