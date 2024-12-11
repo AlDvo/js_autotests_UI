@@ -3,6 +3,7 @@
 ##  Содержание:
 - <a href="#cases"> Тест-кейсы</a>
 - <a href="#autotests"> Запуск автотестов</a>
+- <a href="#generateAllureReport"> Генерация отчетов</a>
 - <a href="#jenkins"> Сборка в Jenkins</a>
 - <a href="#allureReport"> Пример Allure-отчета</a>
 - <a href="#allureTestOpsReport"> Пример Allure TestOps-отчета</a>
@@ -32,6 +33,8 @@ ____
 npm test
 ```
 
+<a id="generateAllureReport"></a>
+_____
 ### Генерация отчетов Allure из терминала
 
 Для uенерация отчетов использовать команду ниже:
