@@ -50,7 +50,7 @@ ____
 
 ____
 <a id="allureTestOpsReport"></a>
-## <img width="30" style="vertical-align:middle" title="Allure TestOps Report" src="media/logo/testops-logo.png"> </a> Пример <a target="_blank" href="https://allure.autotests.cloud/launch/43065/tree/677705?treeId=0"> Allure-отчета </a>
+## <img width="30" style="vertical-align:middle" title="Allure TestOps Report" src="media/logo/testops-logo.png"> </a> Пример <a target="_blank" href="https://allure.autotests.cloud/launch/43065/tree/677705?treeId=0"> Allure TestOps-отчета </a>
 <p align="center">
 <img title="Allure TestOps Report" src="media/screenshots/allure-testops.png">
 </p>
